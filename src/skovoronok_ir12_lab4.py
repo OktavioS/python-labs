@@ -37,15 +37,15 @@ class Shoes:
     def set_color(self, color):
         self.__color = color
 
-    @ staticmethod  # глянь ці штуки і як їх юзати!!
+    @ staticmethod
     def test():
         print('Hello')
 
     def __del__(self):
-        return (f'\nОб\'єкт {self.__company_name} видалено\n'
-                f'Об\'єкт {self.__price} видалено\n'
-                f'Об\'єкт {self.__size} видалено\n'
-                f'Об\'єкт {self.__color} видалено\n')
+        print(f'\nОб\'єкт {self.__company_name} видалено\n'
+              f'Об\'єкт {self.__price} видалено\n'
+              f'Об\'єкт {self.__size} видалено\n'
+              f'Об\'єкт {self.__color} видалено\n')
 
 
 
@@ -67,12 +67,10 @@ def main():
     print(CP)
     print(NB)
     print(Nike)
-    Nike.test()
 
     print(f'Ціна кросівок C.P. Company: {CP.get_price()}€\n')
     CP.set_size(45)
     print(f'Розмір об\'єкта {CP.get_comp_name()} змінено на {CP.get_size()}')
-    print(CP.__del__())
 
 
 
